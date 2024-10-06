@@ -7,6 +7,11 @@
 
 /* 2. Determinar posicionamento e Layout dos Elementos */
 
+body{
+    display: flex;
+    flex-direction: column;    
+    
+}
 
 header{
     height: 80px;
@@ -55,6 +60,19 @@ header{
 .login-container{
     display: flex;
     gap: 3rem;
+}
+
+.discount-container{
+    display: flex;
+    gap: 10rem;
+}
+
+main{
+    margin-top: 80px;
+}
+
+footer{
+    margin-top: 80px;
 }
 /* 3. Determinar Cores */
 
