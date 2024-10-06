@@ -1,0 +1,53 @@
+header{
+    height: 80px;
+    width: 100%;
+    background: #555;
+    display: flex;
+    position: fixed;
+}
+.nav-bar{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: blue;
+
+}
+.nav-row-01{
+    background: #515281;
+    color: rgb(0, 0, 0);
+    flex: 2;
+    display: flex;
+    align-items: center;
+}
+
+.nav-row-02{
+    background-color: #231650;
+    color: black;
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+
+}
+.nav-list{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-item{
+    display: flex;
+    align-items: center;
+}
+
+.login-container{
+    display: flex;
+    gap: 3rem;
+}
+
+.discount-container{
+    display: flex;
+    gap: 10rem;
+}
