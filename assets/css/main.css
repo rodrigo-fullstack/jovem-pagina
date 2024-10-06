@@ -19,12 +19,28 @@ body{
 
 main{
     margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .week-container{
     display: flex;
-    
+    width: 100%;
+    background-color: gray;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 1rem;
 }
+
+.week-container .card-container{
+    background-color: brown;
+    padding: 5%;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
 footer{
     margin-top: 80px;
 }
