@@ -21,30 +21,7 @@ a.btn{
 
 
 
-footer{
-    margin-top: 80px;
-    background-color: #5c5600;
-    display: flex;
-    padding: 3rem;
-    justify-content: space-between;
-}
 
-.footer-column{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.footer-list{
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-}
-
-.footer-list li{
-    cursor: pointer;
-}
 /* 3. Determinar Cores */
 
 /* 4. Determinar Fontes */
