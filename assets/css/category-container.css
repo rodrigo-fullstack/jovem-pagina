@@ -1,0 +1,25 @@
+.category-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    row-gap: 1rem;
+    background-color: gray;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.category-container-title{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    text-align: center;
+}
+.category{
+    background: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.show-more{
+    background: #aabbcc;
+}
