@@ -1,0 +1,19 @@
+.cta-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: rgb(158, 158, 158);
+}
+.cta-desc{
+    width: 20%;
+    text-align: center;
+}
+
+.cta-container .login{
+    background: red;
+    width: 20%;
+    text-align: center;
+    padding: 0.5rem;
+}

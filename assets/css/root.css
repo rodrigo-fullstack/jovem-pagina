@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+/* 2. Determinar posicionamento e Layout dos Elementos */
+
+body{
+    display: flex;
+    flex-direction: column;    
+    
+}
