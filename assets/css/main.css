@@ -63,6 +63,13 @@ main{
     text-align: center;
 }
 
+.btn{
+    background-color: blue;
+}
+a.btn{
+    text-decoration: none;
+    background-color: #fff;
+}
 
 footer{
     margin-top: 80px;
