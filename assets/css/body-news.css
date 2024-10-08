@@ -1,0 +1,24 @@
+body{
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "main main aside"
+    "footer footer footer"
+    ;
+    column-gap: 2rem;
+    /* row-gap: 100px; */
+
+}
+
+header{
+    grid-area: header;
+}
+
+main{ grid-area: main; }
+
+aside{ grid-area: aside; }
+
+footer{
+    grid-area: footer;
+}
+
