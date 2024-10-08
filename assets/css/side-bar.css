@@ -1,0 +1,17 @@
+aside{
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    height: fit-content;
+}
+
+.side-bar-list{
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+}
+
+.side-bar-sublist{
+    margin-left: 2rem;
+}
