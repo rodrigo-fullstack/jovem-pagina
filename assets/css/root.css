@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 
 :root{
+    --header-bg-row-01: #FFC400;
+    --header-bg-row-02: #38046F;
     --btn: #38046F;
     --btn02: #FFC400;
     --bgcolor: #FFE590;

@@ -17,7 +17,9 @@
 
 .btn{
     display: inline-flex;
+    align-items: center;
     width: fit-content;
+    height: 100%;
     font-family: 'Instrument Sans';
     font-weight: 600;
     font-size: 1.2rem;
@@ -34,8 +36,6 @@ button.btn{
     text-align: left;
 }
 
-a.login, a.sign-up{
-    background-color: green;
-    padding: 0.5rem;
-    /* padding: 1%; Vaza da tela*/
+header a.news-link{
+    padding: 0;
 }
