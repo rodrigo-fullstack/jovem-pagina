@@ -14,47 +14,6 @@ main{
 
 
 
-
-.btn-container{
-    display: flex;
-    justify-content: center;
-}
-
-/* Para o vender */
-.btn-container{
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.btn-container{
-    background-color: var(--btn02);
-    padding: 1rem;
-    width: fit-content;
-}
-
-.btn{
-    display: inline-flex;
-    width: fit-content;
-    padding: 0.8%;
-    margin-left: 1rem;
-    margin-top: 1rem;
-    font-family: 'Instrument Sans';
-    font-weight: 600;
-    font-size: 1.2rem;
-    background-color: var(--btn);
-    color: rgb(255, 255, 255);
-    cursor: pointer;    
-    /* Depois pensar na responsividade
-    font-size: clamp; 
-    */
-}
-
-button.btn{
-    text-align: left;
-}
-
-
-
 /* 3. Determinar Cores */
 
 /* 4. Determinar Fontes */
