@@ -12,7 +12,22 @@ main{
     padding: 4rem;
 }
 
+.book-select-data{
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
 
+.book-data{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.book-data .data-desc{
+    text-align: center;
+}
 
 .btn-container{
     display: flex;
