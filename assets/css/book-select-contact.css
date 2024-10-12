@@ -1,0 +1,26 @@
+.book-select-contact-container{
+    display: flex;
+    padding: 1rem;
+    background-color: green;
+    gap: 1rem;
+}
+
+.contact-desc{
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: blue;
+}
+
+.seller-profile-container{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.seller-profile{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
