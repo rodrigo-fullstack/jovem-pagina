@@ -1,0 +1,17 @@
+/* Problema: Não está alinhado com o .book-select-container */
+.book-select-rating{
+    display: flex;
+    gap: 2rem;
+}
+.star-container{
+    background-color: blue;
+    padding: 1rem;
+    flex: 1;
+    justify-content: center;
+}
+
+.customer-ratings-container{
+    flex: 3;
+    padding: 1rem;
+    background-color: red;
+}
