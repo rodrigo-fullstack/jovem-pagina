@@ -18,15 +18,13 @@
 .btn{
     display: inline-flex;
     width: fit-content;
-    padding: 0.8%;
-    margin-left: 1rem;
-    margin-top: 1rem;
     font-family: 'Instrument Sans';
     font-weight: 600;
     font-size: 1.2rem;
     background-color: var(--btn);
     color: rgb(255, 255, 255);
     cursor: pointer;    
+    padding: 0.5rem;
     /* Depois pensar na responsividade
     font-size: clamp; 
     */
@@ -34,4 +32,10 @@
 
 button.btn{
     text-align: left;
+}
+
+a.login, a.sign-up{
+    background-color: green;
+    padding: 0.5rem;
+    /* padding: 1%; Vaza da tela*/
 }
