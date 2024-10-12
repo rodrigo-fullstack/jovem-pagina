@@ -58,6 +58,34 @@ header{
     width: 128px;
 }
 
+.form-search{
+    display: inline-flex;
+    height: 100%;
+}
+
+.input-search{
+    border: none;
+    outline: none;
+    padding: 0px 0.5rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    
+}
+
+/*Estiliza form com o foco do input interno*/
+.form-search:has(> input[type="search"]:focus){
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.507);
+}
+
+.form-search:focus{
+    outline: blue 2px solid;
+}
+
+.btn-search{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 .discount{
     border-left: 2px solid #ffffff;
     border-right: 2px solid #ffffff;
