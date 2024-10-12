@@ -12,20 +12,7 @@ main{
     padding: 4rem;
 }
 
-.book-select-rating{
-    display: flex;
-    grid-template-columns: auto auto;
-    gap: 2rem;
-}
-.star-container{
-    background-color: blue;
-    padding: 1rem;
-    flex: 3;
-}
 
-.customer-ratings-container{
-    flex: 6;
-}
 
 .btn-container{
     display: flex;
