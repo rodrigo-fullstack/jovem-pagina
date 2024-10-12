@@ -12,28 +12,7 @@ main{
     padding: 4rem;
 }
 
-.book-select-container{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
 
-.book-select-general-container{
-    display: flex;
-    gap: 3rem;
-}
-
-.book{
-    flex: 1;
-    gap: 1rem;
-}
-
-.book-select-desc{
-    flex: 3;
-}
-.book h1{
-    text-align: center;
-}
 
 .btn-container{
     display: flex;
