@@ -9,6 +9,12 @@ main{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    padding: 4rem;
+}
+
+.book-select-container{
+    display: flex;
+    flex-direction: column;
 }
 
 .btn-container{
