@@ -12,13 +12,7 @@ main{
     padding: 4rem;
 }
 
-.book-select-author{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    background-color: blue;
-    padding: 1rem;
-}
+
 
 .btn-container{
     display: flex;
