@@ -32,3 +32,27 @@ button{
     border: none;
 
 }
+
+.emphasis{
+    font-style: normal;
+    display: inline-flex;
+    color: var(--header-bg-row-01);
+}
+/* .emphasis::after{
+    display: inline-flex;
+    content: '';
+    margin-top: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: #FFC400;
+
+} */
+
+/* .emphasis::after{
+    background-color: yellow;
+    width: 30px;
+    height: 30px;
+    content: '';
+    display: block;
+    position: absolute;
+} */

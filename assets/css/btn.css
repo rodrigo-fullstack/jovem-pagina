@@ -52,5 +52,14 @@ button.btn{
 .cta-container .login{
     width: 20%;
     justify-content: center;
+    background: var(--header-bg-row-01);
+    color: black;
+    font-weight: 700;
+    transition: 300ms ease-in-out;
+}
+
+.cta-container .login:hover{
+    transform: scale(1.1);
+    box-shadow: none;
 }
 
