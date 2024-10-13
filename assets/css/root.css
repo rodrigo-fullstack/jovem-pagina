@@ -33,6 +33,10 @@ button{
 
 }
 
+h1{
+    font-family: 'Instrument Sans';
+}
+
 .emphasis{
     font-style: normal;
     display: inline-flex;
