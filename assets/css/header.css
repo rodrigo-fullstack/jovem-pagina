@@ -3,6 +3,7 @@ header{
     width: 100%;
     display: flex;
     position: fixed;
+    z-index: 1000; /* Para evitar elementos sobrepor o header*/
 }
 .nav-bar{
     display: flex;
