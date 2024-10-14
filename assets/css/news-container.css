@@ -4,7 +4,8 @@
     justify-content: space-evenly;
     padding: 1rem;
     row-gap: 1rem;
-    background: #099fda;
+    background-color: var(--header-bg-row-01);
+    border-radius: 10px;
 }
 
 .news-container-title{
@@ -19,15 +20,12 @@
     padding: 1rem;
     gap: 1rem;
 }
-.news-img{
+.news-img-container{
     grid-row-start: 1;
     grid-row-end: 3;
-    background-color: #fff;
-    justify-self: stretch;
     place-self: center;
     height: fit-content;
-    padding: 1rem;
-
+    background-color: none;
 }
 
 .news-container-button{
