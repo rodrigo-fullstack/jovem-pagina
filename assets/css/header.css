@@ -87,12 +87,15 @@ header{
     border-bottom-right-radius: 5px;
 }
 
-.nav-item:has(.cart-shopping-container){
+.nav-link:has(.cart-shopping-container){
     display: grid;
     grid-template-columns: auto auto;
     padding: 0;
 }
 
+.nav-link:has(.cart-shopping-container):hover{
+    text-decoration: none;
+}
 .cart-shopping-container{
     display: flex;
     justify-content: end;
@@ -128,6 +131,7 @@ header{
     border-right: 2px solid #ffffff;
     padding-right: 10px;
 }
+
 
 /* Maior prioridade de estilo
 
