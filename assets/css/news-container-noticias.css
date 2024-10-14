@@ -1,0 +1,8 @@
+/* Específico para a página Noticias */
+
+.news-img-container{
+    width: 200px;
+}
+.news-img-container img{
+    width: 100%;
+}

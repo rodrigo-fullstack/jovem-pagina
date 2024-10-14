@@ -1,11 +1,11 @@
 body{
     display: grid;
     grid-template-areas: 
-    "header header header"
-    "main main aside"
-    "footer footer footer"
+    "header header header header"
+    "main main main aside"
+    "footer footer footer footer"
     ;
-    column-gap: 2rem;
+    column-gap: 0;
     /* row-gap: 100px; */
 
 }
