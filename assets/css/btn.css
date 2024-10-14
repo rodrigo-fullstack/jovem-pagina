@@ -33,7 +33,7 @@
 }
 
 .btn:hover{
-    box-shadow: inset 0 0 0 3px #c300ff;
+    background-color: blueviolet;
 }
 
 .nav-link:hover{
