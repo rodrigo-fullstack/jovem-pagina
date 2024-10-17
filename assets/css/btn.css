@@ -30,6 +30,10 @@
     */
 }
 
+button{
+    background-color: transparent;
+}
+
 .btn:hover{
     background-color: blueviolet;
 }
@@ -79,4 +83,8 @@ button.btn{
 
 .minus{
     background-color: #F03B1D;
+}
+
+.icon{
+    width: 30px;
 }
