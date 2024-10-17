@@ -4,15 +4,13 @@
 }
 
 /* Para o vender */
-.btn-container{
-    flex-direction: column;
-    gap: 1rem;
-}
 
 .btn-container{
     background-color: var(--btn02);
     padding: 1rem;
     width: fit-content;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .btn{

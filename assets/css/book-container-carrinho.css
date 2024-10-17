@@ -1,0 +1,10 @@
+.book-container{
+    box-shadow: none;
+    grid-template-columns: repeat(3, auto);
+    border: 7px solid var(--header-bg-row-02);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
