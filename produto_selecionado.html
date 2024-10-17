@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/btn.css">
     <link rel="stylesheet" href="assets/css/book-container.css">
     <link rel="stylesheet" href="assets/css/book-select-container.css">
     <link rel="stylesheet" href="assets/css/book-select-data.css">
@@ -22,27 +23,46 @@
             <div class="nav-row-01">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <div class="logo-container">
-                            <h1>LOGO</h1>
-                            <!-- <img src="" alt="logo" class="logo"> -->
-                        </div>
+                        <a href="index.html">
+                            <div class="logo-container">
+                                <img src="assets/img/logo-nobg.svg" alt="logo" class="logo">
+                            </div>
+                        </a>
                     </li>
     
                     <li class="nav-item">
-                        <input type="search" name="search-book" id="search-book" class="input-search">
+
+                        <form action="" class="form-search">
+                            <input type="search" name="search-book" id="search-book" class="input-search">
+                            
+                            <button class="btn btn-search" type="submit">
+                                <img src="assets/img/search-icon.svg" alt="">
+                            </button>
+                        </form>
+
+                    </li>
+
+                    <li class="nav-item">
+                            <a href="carrinho.html" class="nav-link">
+    
+                            <div class="cart-shopping-container">
+                                <img src="assets/img/shopping-cart.svg" alt="">
+                            </div>
+    
+                            <div class="cart-items">
+                                5
+                            </div>
+    
+                            <h1 class="cart-title">
+                                Carrinho
+                            </h1>
+    
+                        </a>
                     </li>
     
                     <li class="nav-item">
-                        <div class="cart-shop-container">
-                            <h1>CARRINHO</h1>
-                        </div>
-                    </li>
-    
-                    <li class="nav-item">
-                        <div class="login-container">
-                            <a href="#" class="btn login">Entrar</a>
-                            <a href="#" class="btn sign-up">Cadastrar</a>
-                        </div>
+                        <a href="#" class="btn btn-header login">Entrar</a>
+                        <a href="#" class="btn btn-header sign-up">Cadastrar</a>
                     </li>
 
                 </ul>
@@ -52,28 +72,41 @@
                 
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="#" class="btn news-link">Notícias</a>
+                        <a href="noticias.html" class="btn btn-news">Notícias</a>
+                    </li>
+
+                    <li class="nav-item discount">
+                        <p>Ofertas em Livros de</p>
                     </li>
 
                     <li class="nav-item">
-                        <div class="discount-container">
-                            <p>Ofertas em Livros de</p>
-                        
-                            <a href="#" class="btn">Ação</a>
-                            <a href="#" class="btn">Terror</a>
-                            <a href="#" class="btn">Fantasia</a>
-                            <a href="#" class="btn">Fic. Científica</a>
-                        </div>
+                        <a href="#" class="btn nav-link">Ação</a>    
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="btn">Cupons</a>
+                        <a href="#" class="btn nav-link">Terror</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="btn nav-link">Fantasia</a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a href="#" class="btn nav-link">Fic. Científica</a>
+                    </li>
+
+                    <li class="nav-item final">
+                        <a href="#" class="btn nav-link">Todos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="btn nav-link">Cupons</a>
                     </li>
                 </ul>
             </div><!-- nav-row-02 -->
 
-        </nav>
-    </header>
+        </nav><!-- nav-bar -->
+    </header><!-- nav-header -->
 
     <main>
         <article class="book-select-container">
