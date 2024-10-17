@@ -60,3 +60,23 @@ button.btn{
     transform: scale(1.1);
     box-shadow: none;
 }
+
+.btn-container:has(.btn-buy){
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 0;
+}
+
+.btn-buy{
+    width: fit-content;
+    padding: 5px;
+}
+
+.plus{
+    background-color: #00D61B;
+}
+
+.minus{
+    background-color: #F03B1D;
+}

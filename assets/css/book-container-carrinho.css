@@ -8,3 +8,11 @@
     grid-row-end: 3;
 }
 
+.book-buy-information{
+    display: flex;
+    justify-content: space-between;   
+    width: 100%;
+}
+
+
+
