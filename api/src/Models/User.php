@@ -48,16 +48,18 @@ class User{
         $bd->getConnection();
 
         // Se houve a conexão...
-        // Aceita objeto como condição para ser aceita...
         // Consulta de inserção...
         $bd->query("
-            INSERT INTO usuario(email, senha)
-            VALUES(:email, :senha)
+            INSERT INTO usuario(nome, email, senha, data_nasc, cpf)
+            VALUES(:nome, :email, :senha, :data_nasc, :cpf)
         ");
 
         // Vincula os parâmetros determinados na inserção
+        $bd->bind(':nome', $data['nome']);
         $bd->bind(':email', $data['email']);
         $bd->bind(':senha', $data['senha']);
+        $bd->bind(':data_nasc', $data['data_nasc']);
+        $bd->bind(':cpf', $data['cpf']);
 
         // Execução da consulta
         $bd->execute();

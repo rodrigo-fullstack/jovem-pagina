@@ -81,8 +81,11 @@ class UserService{
             // Campos são validados para serem persistidos no bd
             // Envia senha criptografada para o validator
             $fields = Validator::validate([
+                "nome" => $data['nome'] ?? '',
                 "email" => $data['email'] ?? '',
-                "senha" => $data['senha'] ?? ''
+                "senha" => $data['senha'] ?? '',
+                "data_nasc" => $data['data_nasc'] ?? '',
+                "cpf" => $data['cpf'] ?? ''
             ]);
 
             $fields['senha'] = password_hash($fields['senha'], PASSWORD_BCRYPT);
