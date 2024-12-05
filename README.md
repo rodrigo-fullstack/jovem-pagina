@@ -137,9 +137,13 @@ O Escopo do Projeto, que inclui todos os seus entregáveis e não entregáveis, 
 
             Digitação dos Dados do Cadastro: email ou telefone e senha
 
-        Tela de Cadastro: Permite os usuários cadastrarem seus dados
+        Tela de Cadastro Usuário Comum: Permite os usuários cadastrarem seus dados
 
             Digitação dos Dados como: email, telefone, CPF, etc.
+
+        Tela de Cadastro Usuário Vendedor: Permite os usuários vendedores cadastrar seus dados
+
+            Digitação dos Dados como email, telefone, nome, cpf (para pf) ou cnpj (para pj) e endereço
 
         Tela Inicial:
 
@@ -191,8 +195,10 @@ O Escopo do Projeto, que inclui todos os seus entregáveis e não entregáveis, 
 
             Valor total dos itens
 
-        Tela de Perfil
+        Tela de Perfil: Exibição das Configurações da Conta do Usuário
 
+        
+        
         Tela de Criação de Anúncio de Livros: Permite os vendedores criar um anúncio de livro
 
         Tela do Formulário dos Jornalistas
@@ -207,9 +213,9 @@ O Escopo do Projeto, que inclui todos os seus entregáveis e não entregáveis, 
 
         Cadastro realizando Insert no Banco de Dados
 
-        Autenticação utilizando $_SESSION[]
+        Autenticação utilizando JWT
 
-        Implementar Segurança da Informação
+        Implementar Segurança da Informação contra SQL Injection e XSS 
 
     Sistema de Cadastro e Autenticação dos jornalistas desenvolvido em PHP
 
