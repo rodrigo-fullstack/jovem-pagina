@@ -52,8 +52,8 @@ class UserService{
     public static function auth(array $data){
         try{
             $fields = Validator::validate([
-                "email" => $data['email'],
-                "senha" => $data['senha']
+                "email" => $data['email'] ?? '',
+                "senha" => $data['senha'] ?? ''
             ]);
 
             $user = User::auth($fields);
