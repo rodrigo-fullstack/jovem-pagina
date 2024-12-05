@@ -79,7 +79,7 @@ class Database{
     }
 
     // Retorna verdadeiro se o último id inserido é > 0
-    public function lastInsertId(){
+    public function verifyLastInsertId(){
         // Se o dbh estiver definido retorna true ou false se houve inserção...
         if(isset($this->dbh)){
             return $this->dbh->lastInsertId() > 0 ? true : false;
@@ -89,7 +89,17 @@ class Database{
         return null;
     }
 
-    public function checkAffectedRows(){
+    public function getLastInsertId(){
+        // Se o dbh estiver definido retorna true ou false se houve inserção...
+        if(isset($this->dbh)){
+            return $this->dbh->lastInsertId();
+
+        }
+        // Retorna nulo se não foi definido...
+        return null;
+    }
+
+    public function getAffectedRows(){
         if(isset($this->stmt)){
             return $this->stmt->rowCount();
         }

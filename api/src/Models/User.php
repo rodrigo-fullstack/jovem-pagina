@@ -65,7 +65,7 @@ class User{
         $bd->execute();
         
         // Retorna se houve última inserção de ID, caso contrário é um false
-        return $bd->lastInsertId();
+        return $bd->verifyLastInsertId();
         
     }
 
@@ -114,7 +114,29 @@ class User{
         $bd->execute();
         
         // Se houve linhas afetadas, ou seja, houve update: (vem depois do execute)
-        return $bd->checkAffectedRows() < 1 ? false : true;
+        return $bd->getAffectedRows() < 1 ? false : true;
+
+
+    }   
+
+    public static function updateAddress(int|string $idUser, int|string $idAddress){
+        $bd = new Database();
+
+        $bd->getConnection();
+
+        $stmt = $bd->query("UPDATE usuario
+        SET id_endereco = :id_endereco
+        WHERE id_usuario = :id_usuario
+        ");
+
+        $bd->bind(':id_usuario', $idUser);
+
+        $bd->bind(':id_endereco', $idAddress);
+
+        $bd->execute();
+        
+        // Se houve linhas afetadas, ou seja, houve update: (vem depois do execute)
+        return $bd->getAffectedRows() < 1 ? false : true;
 
 
     }   
@@ -130,7 +152,7 @@ class User{
 
         $bd->execute();
 
-        return $bd->checkAffectedRows() < 1 ? false : true;
+        return $bd->getAffectedRows() < 1 ? false : true;
 
     }
     
