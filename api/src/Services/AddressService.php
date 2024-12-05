@@ -40,4 +40,30 @@ class AddressService{
        }
 
     }
+
+    public static function get(mixed $jwt){
+        try{
+            if(!$jwt) return ['unauthorized' => "Sorry, we couldn't authenticate you"];
+        
+            $userFromToken = JWT::validateToken($jwt);
+            if(!$userFromToken) {
+                return ['unauthorized' => "Please, provide a valid token..."];
+            }
+
+            $user = User::find($userFromToken['id_usuario']);
+
+            $address = !is_null($user['id_endereco']) ? 
+            Address::get($user['id_endereco']) : null;
+
+            if(!$address) return ['error' => "User {$user['nome']} do not have valid address..."];
+
+            return $address;
+    
+        }catch(PDOException $e){
+                return Validator::validatePDO($e->getCode());
+        } catch (Exception $e){
+                return ['error' => $e->getMessage()];
+        }
+    
+    }       
 }

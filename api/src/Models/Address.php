@@ -21,4 +21,19 @@ class Address{
 
         return $bd->getLastInsertId();
     }
+
+    public static function get(int|string $id){
+        $bd = new Database();
+
+        $bd->getConnection();
+
+        $bd->query("SELECT * FROM endereco 
+                        WHERE id_endereco = :id_endereco");
+
+        $bd->bind(":id_endereco", $id);
+
+        $bd->execute();
+
+        return $bd->fetchOne();
+    }
 }

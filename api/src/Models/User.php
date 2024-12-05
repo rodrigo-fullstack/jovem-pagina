@@ -32,8 +32,10 @@ class User{
 
         $bd->getConnection();
 
+        $colunas = "id_usuario, nome, email, data_nasc, método_pagamento, id_endereco";
         // Corrigindo problema do atributo id (correto: id_usuario)
-        $bd->query("SELECT * FROM usuario WHERE id_usuario = :id_usuario");
+        $bd->query("SELECT $colunas FROM usuario WHERE id_usuario = :id_usuario");
+
         $bd->bind(":id_usuario", $id);
 
         $bd->execute();
