@@ -19,7 +19,7 @@ class AddressController{
                 "error" => true,
                 "success" => false,
                 "message" => $addressServ['unauthorized'],
-            ]);
+            ], 401);
         }
 
         if(isset($addressServ['error'])){
@@ -27,7 +27,7 @@ class AddressController{
                 "error" => true,
                 "success" => false,
                 "message" => $addressServ['error'],
-            ]);
+            ], 400);
         }
 
         return $response::json([
@@ -36,4 +36,6 @@ class AddressController{
             "data" => $addressServ
         ], 200);
     }
+
+
 }
