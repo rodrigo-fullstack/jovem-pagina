@@ -15,5 +15,5 @@ Routes::put('/users/update', "UserController@update");
 Routes::delete('/users/{id}/delete', "UserController@delete");
 Routes::post("/address/save", "AddressController@save");
 Routes::get("/address/get", "AddressController@get");
-
+Routes::post("/seller/save", "SellerController@save");
 // $routes = Routes::routes(');
