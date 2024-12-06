@@ -51,7 +51,8 @@ class AddressService{
             }
 
             $user = User::find($userFromToken['id_usuario']);
-
+            
+            //Teste
             $address = !is_null($user['id_endereco']) ? 
             Address::get($user['id_endereco']) : null;
 
