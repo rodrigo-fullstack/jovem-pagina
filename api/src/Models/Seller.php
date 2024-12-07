@@ -33,4 +33,30 @@ class Seller{
             return $bd->verifyLastInsertId();
         }
     }
+
+    public static function auth(array $data){
+        $bd = new Database();
+        $bd->getConnection();
+
+        $colunas = "id_vendedor, email, senha";
+        $bd->query("SELECT $colunas FROM vendedor WHERE email = :email");
+
+        $bd->bind(":email", $data['email']);
+
+        $bd->execute();
+
+        $seller = $bd->fetchOne();
+
+        if(!$seller) return false;
+
+        if(!password_verify($data['senha'], $seller['senha'])){
+            return false;
+        }
+
+        return [
+            "id_vendedor" => $seller['id_vendedor'],
+            "email" => $seller['email']
+        ];
+
+    }
 }

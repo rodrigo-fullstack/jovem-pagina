@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Http\JWT;
 use App\Models\Seller;
 use App\Utils\Validator;
 use Exception;
@@ -31,7 +32,29 @@ class SellerService{
             return ['error' => $e->getMessage()];
         }
 
+    }
 
+    public static function auth(array $data){
+        try{
+            $fields = Validator::validate([
+                "email" => $data['email'] ?? '',
+                "senha" => $data['senha'] ?? ''
+            ]);
+
+            $seller = Seller::auth($fields);
+
+            if(!$seller) return ['unauthorized' => "Email or password are incorrect..."];
+
+            return JWT::generate([
+                "id_vendedor" => $seller['id_vendedor'],
+                "email" => $seller['email']
+            ]);
+
+        } catch(PDOException $e){
+            return Validator::validatePDO($e->getCode());
+        } catch(Exception $e){
+            return ['error' => $e->getMessage()];
+        }
 
     }
 }
