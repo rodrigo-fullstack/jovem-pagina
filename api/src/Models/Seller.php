@@ -77,4 +77,22 @@ class Seller{
         return $bd->getAffectedRows() < 1 ? false : true;
         
     }
+
+    public static function find(int|string $id){
+        $bd = new Database();
+        $bd->getConnection();
+
+        $colunas = "id_vendedor, nome, email, pessoa, id_codigo_vendedor, id_endereco";
+
+        $bd->query("SELECT $colunas FROM vendedor 
+        WHERE id_vendedor = :id_vendedor
+        ");
+
+        $bd->bind(":id_vendedor", $id);
+
+        $bd->execute();
+
+        return $bd->fetchOne();
+
+    }
 }

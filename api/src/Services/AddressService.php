@@ -56,25 +56,38 @@ class AddressService{
     public static function get(mixed $jwt){
         try{
             if(!$jwt) return ['unauthorized' => "Sorry, we couldn't authenticate you"];
-        
+            $userType = "";
+
             $userFromToken = JWT::validateToken($jwt);
             if(!$userFromToken) {
                 return ['unauthorized' => "Please, provide a valid token..."];
             }
 
-            $user = User::find($userFromToken['id_usuario']);
-            
-            $address = !is_null($user['id_endereco']) ? 
-            Address::get($user['id_endereco']) : null;
+            $person = null;
 
-            if(!$address) return ['error' => "User {$user['nome']} do not have valid address..."];
+            if(isset($userFromToken['id_usuario'])){
+                $person = User::find($userFromToken['id_usuario']);
+                $userType = "User";
+
+            }
+
+            if(isset($userFromToken['id_vendedor'])){
+                $person = Seller::find($userFromToken['id_vendedor']);
+                $userType = "Seller";
+                
+            }
+            
+            $address = !is_null($person['id_endereco']) ? 
+            Address::get($person['id_endereco']) : null;
+
+            if(!$address) return ['error' => "$userType {$person['nome']} do not have valid address..."];
 
             return $address;
     
         }catch(PDOException $e){
-                return Validator::validatePDO($e->getCode());
+            return Validator::validatePDO($e->getCode());
         } catch (Exception $e){
-                return ['error' => $e->getMessage()];
+            return ['error' => $e->getMessage()];
         }
     
     }       
