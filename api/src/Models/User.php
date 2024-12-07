@@ -126,14 +126,14 @@ class User{
 
         $bd->getConnection();
 
-        $stmt = $bd->query("UPDATE usuario
+        $bd->query("UPDATE usuario
         SET id_endereco = :id_endereco
         WHERE id_usuario = :id_usuario
         ");
 
-        $bd->bind(':id_usuario', $idUser);
-
         $bd->bind(':id_endereco', $idAddress);
+
+        $bd->bind(':id_usuario', $idUser);
 
         $bd->execute();
         

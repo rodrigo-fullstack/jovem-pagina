@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Http\JWT;
 use App\Models\Address;
+use App\Models\Seller;
 use App\Models\User;
 use App\Utils\Validator;
 use Exception;
@@ -12,6 +13,7 @@ use PDOException;
 class AddressService{
     public static function save(array $data, mixed $jwt){
        try{
+            $userType = "";
             if(!$jwt) return ['unauthorized' => "Sorry, we couldn't authenticate you"];
         
             $fields = Validator::validate([
@@ -27,11 +29,21 @@ class AddressService{
             if(!$userFromToken) {
                 return ['unauthorized' => "Please, provide a valid token..."];
             }
-            $addressUpdated = User::updateAddress($userFromToken['id_usuario'], $addressId);
+
+            if(isset($userFromToken['id_usuario'])){
+                $addressUpdated = User::updateAddress($userFromToken['id_usuario'], $addressId);
+                $userType = "User";
+            }
+
+            if(isset($userFromToken['id_vendedor'])){
+                $addressUpdated = Seller::updateAddress($userFromToken['id_vendedor'], $addressId);
+                $userType = "Seller";
+
+            }
 
             if(!$addressUpdated) return ['error' => "Address not updated!"];
 
-            return "User's address updated successfully!";
+            return "$userType's address updated successfully!";
 
        }catch(PDOException $e){
             return Validator::validatePDO($e->getCode());

@@ -59,4 +59,22 @@ class Seller{
         ];
 
     }
+
+    public static function updateAddress(
+        int|string $idSeller, int|string $idAddress){
+        $bd = new Database();
+        $bd->getConnection();
+
+        $bd->query("UPDATE vendedor 
+        SET id_endereco = :id_endereco
+        WHERE id_vendedor = :id_vendedor");
+
+        $bd->bind(":id_endereco", $idAddress);
+        $bd->bind(":id_vendedor", $idSeller);
+
+        $bd->execute();
+
+        return $bd->getAffectedRows() < 1 ? false : true;
+        
+    }
 }
