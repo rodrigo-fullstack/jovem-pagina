@@ -20,4 +20,16 @@ class Book{
 
         return $bd->verifyLastInsertId();
     }
+    public static function get(int|string $id){
+        $bd = new Database();
+        $bd->getConnection();
+
+        $bd->query("SELECT * FROM livro WHERE id_livro = :id");
+
+        $bd->bind(":id", $id);
+
+        $bd->execute();
+
+        return $bd->fetchOne();
+    }
 }

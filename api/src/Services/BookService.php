@@ -33,4 +33,13 @@ class BookService{
             return ['error' => $e->getMessage()];
         }
     }
+
+    public static function get(int|string $idBook, mixed $jwt){
+            if(!$jwt) return ['unauthorized' => "Sorry, we couldn't authenticate you"];
+            
+            $userFromToken = JWT::validateToken($jwt);
+            if(!$userFromToken) return ['unauthorized' => "Please provide a valid token..."];
+
+            $book = Book::get($idBook);
+    }
 }

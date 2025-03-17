@@ -38,4 +38,20 @@ class BookController{
             "message" => $bookServ
         ], 201);
     }
+
+    public function get(Request $request, Response $response){
+        $idBook = $request::requestUri()[4];
+        
+        $jwt = $request::authorization();
+
+        $bookServ = BookService::get($idBook, $jwt);
+
+        if(isset($bookServ['error'])){
+            return $response::json([
+                "error" => true,
+                "success" => false,
+                "message" => $bookServ
+            ], 400);
+        }
+    }
 }

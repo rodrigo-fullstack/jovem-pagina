@@ -22,4 +22,5 @@ Routes::post("/seller/save", "SellerController@save");
 Routes::post("/seller/auth", "SellerController@auth");
 
 Routes::post("/book/save", "BookController@save");
+Routes::get("/book/get/{id}", "BookController@get");
 // $routes = Routes::routes(');
