@@ -23,6 +23,10 @@ body{
     background-color: var(--bgcolor);
 }
 
+body.dk > :nth-child(n){
+    padding: 4rem;
+}
+
 a{
     text-decoration: none;
     color: black;
@@ -42,6 +46,12 @@ h1{
     display: inline-flex;
     color: var(--header-bg-row-01);
 }
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 /* .emphasis::after{
     display: inline-flex;
     content: '';
@@ -60,3 +70,9 @@ h1{
     display: block;
     position: absolute;
 } */
+
+@media screen and (orientation: portrait) and (max-width: 1024px) {
+    body.dk > :nth-child(n){
+        padding: 1rem;
+    }
+}

@@ -4,18 +4,18 @@
 
 /* 2.2 Posicionamento dos elementos internos do main */
 
-main{
-    margin-top: 80px;
+.main{
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 4rem;
 }
 
+.main.dk{
+    margin-top: 80px;
+}
 
-
-/* 3. Determinar Cores */
-
-/* 4. Determinar Fontes */
-
-/* 5. Mudar conforme o documento */
+@media screen and (orientation: portrait) and (max-width: 1024px) {
+    .main.mob{
+        margin-top: 100px;   
+    }
+}

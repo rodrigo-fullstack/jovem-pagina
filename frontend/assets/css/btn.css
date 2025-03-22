@@ -51,18 +51,31 @@ button.btn{
     justify-content: center;
 }
 
-.cta-container .login{
-    width: 20%;
+.cta-container .btn.cta{
     justify-content: center;
     background: var(--header-bg-row-01);
     color: black;
     font-weight: 700;
-    transition: 300ms ease-in-out;
+    transition: 200ms ease-in-out;
 }
 
-.cta-container .login:hover{
+.cta-container.dk .btn.cta{
+    width: 20%;
+}
+
+.cta-container .btn.cta:hover{
     transform: scale(1.1);
     box-shadow: none;
+}
+
+@media screen and (orientation: portrait) and (max-width: 1024px){
+    .cta-container.dk .btn.cta{
+        width: 50%;
+    }   
+    
+    .cta-container.dk .btn.cta:active{
+        transform: scale(1.15);
+    }   
 }
 
 .btn-container:has(.btn-buy){
