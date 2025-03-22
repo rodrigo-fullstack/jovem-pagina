@@ -1,9 +1,10 @@
-header{
+.nav-header.dk.mob{
     height: 100px;
     width: 100%;
     display: flex;
     position: fixed;
     z-index: 1000; /* Para evitar elementos sobrepor o header*/
+    padding: 0rem;
 }
 .nav-bar{
     display: flex;
@@ -11,7 +12,7 @@ header{
     width: 100%;
 }
 
-.nav-bar>div{
+.nav-bar.dk>div{
     padding: 0px 4rem;
 
 }
@@ -47,6 +48,29 @@ header{
     align-items: center;
     color: white;
 }
+
+.nav-row-01.dk .nav-item:has(.form-search){
+    width: 30%;
+}
+
+.nav-row-01.mob{
+    display: none;
+}
+
+.nav-row-01.dk .nav-item:has(.menu-btn){
+    gap: 1rem;
+}
+
+.menu-btn{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.menu{
+    width: 100%;
+}
+
 .nav-item:has(a.btn-header){
     gap: 3rem;
 }
@@ -55,31 +79,27 @@ header{
     text-decoration: underline;
 }
 
-.logo{
+.nav-header.dk .logo{
     width: 128px;
 }
 
 .form-search{
-    display: inline-flex;
-    height: 100%;
+    display: flex;
+    width: 100%;
 }
 
 .input-search{
+    width: 100%;
     border: none;
     outline: none;
     padding: 0px 0.5rem;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    
 }
 
 /*Estiliza form com o foco do input interno*/
 .form-search:has(> input[type="search"]:focus){
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.507);
-}
-
-.form-search:focus{
-    outline: blue 2px solid;
 }
 
 .btn-search{
@@ -139,3 +159,45 @@ a.login + a.sign-up{
     background-color: rgb(255, 0, 0);
 } */
 
+@media screen and (orientation: portrait) and (max-width: 1024px){
+    .nav-row-01.dk{
+        display: none;
+    }
+    .nav-row-02.dk{
+        display: none;
+    }
+
+    .nav-row-01.mob{
+        display: flex;
+        width: 100vw;
+    }
+    
+    .nav-row-01.mob .nav-list{
+        gap: 1rem;
+    }
+
+    .nav-bar.mob>div{
+        padding: 0px 1rem;
+        
+    }
+
+
+    .nav-row-01.mob .nav-item:has(.logo-container){
+        width: 55%;
+        gap: 0.5rem;
+    }
+    .nav-row-01.mob .logo{
+        width: 100%;
+    }
+
+    /* .form-search.mob{
+        width: 30%;
+        
+    } */
+
+    .menu-btn.mob{
+        width: 50%;
+    }   
+
+    
+}
